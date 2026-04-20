@@ -1,46 +1,41 @@
 {
-  "meta": {
-    "version": "3.0-stable",
-    "decks": 6,
-    "defaultDeckId": "base"
-  },
-  "defaultDeckId": "base",
+  "version": "4.1",
+  "defaultDeckId": "cards",
   "decks": [
     {
-      "id": "base",
-      "name": "Main Deck",
-      "file": "cards.json",
-      "version": "3.0-stable"
+      "id": "cards",
+      "name": "Core Deck",
+      "file": "cards.json"
     },
     {
       "id": "hard",
       "name": "Hard Deck",
-      "file": "hard.json",
-      "version": "3.0-stable"
+      "file": "hard.json"
     },
     {
       "id": "actual",
       "name": "Actual Test Deck",
-      "file": "Actual4Test_cards.json",
-      "version": "3.0-stable"
+      "file": "Actual4Test_cards.json"
+    },
+    {
+      "id": "ms_practice",
+      "name": "MS Practice Deck",
+      "file": "MS_Practise_QnA_cards.json"
     },
     {
       "id": "multisite",
-      "name": "QnAfromMultiSite",
-      "file": "QnAfromMultiSite_cards.json",
-      "version": "3.0-stable"
+      "name": "Multi-site Deck",
+      "file": "QnAfromMultiSite_cards.json"
     },
     {
       "id": "shapingpixel",
       "name": "ShapingPixel Deck",
-      "file": "ShapingPixel_cards.json",
-      "version": "3.0-stable"
+      "file": "ShapingPixel_cards.json"
     },
     {
-      "id": "mspractiseqna",
-      "name": "MS Practise QnA",
-      "file": "MS_Practise_QnA_cards.json",
-      "version": "3.0-stable"
+      "id": "allexams",
+      "name": "GH-100 All Exam QnA",
+      "file": "GH100-AllExamQnA.json"
     }
   ]
 }

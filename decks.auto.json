@@ -1,9 +1,10 @@
 {
-  "defaultDeckId": "base",
+  "version": "4.1",
+  "defaultDeckId": "cards",
   "decks": [
     {
-      "id": "base",
-      "name": "Main Deck",
+      "id": "cards",
+      "name": "Core Deck",
       "file": "cards.json"
     },
     {
@@ -17,8 +18,13 @@
       "file": "Actual4Test_cards.json"
     },
     {
+      "id": "ms_practice",
+      "name": "MS Practice Deck",
+      "file": "MS_Practise_QnA_cards.json"
+    },
+    {
       "id": "multisite",
-      "name": "QnAfromMultiSite",
+      "name": "Multi-site Deck",
       "file": "QnAfromMultiSite_cards.json"
     },
     {
@@ -27,9 +33,9 @@
       "file": "ShapingPixel_cards.json"
     },
     {
-      "id": "mspractiseqna",
-      "name": "MS Practise QnA",
-      "file": "MS_Practise_QnA_cards.json"
+      "id": "allexams",
+      "name": "GH-100 All Exam QnA",
+      "file": "GH100-AllExamQnA.json"
     }
   ]
 }
