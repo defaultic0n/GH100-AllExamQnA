@@ -1,29 +1,22 @@
 async function loadApp() {
-  const status = document.getElementById("status");
-  const select = document.getElementById("deckSelect");
-
-  const registry = await fetch("decks.json").then(r => r.json());
+  const reg = await fetch('decks.json').then(r=>r.json());
+  const sel = document.getElementById('deckSelect');
   let loaded = 0;
 
-  for (const deck of registry.decks) {
-    const opt = document.createElement("option");
-    opt.value = deck.id;
-    opt.textContent = deck.name;
-    select.appendChild(opt);
-
+  for (const d of reg.decks) {
+    const o = document.createElement('option');
+    o.value = d.id;
+    o.textContent = d.name;
+    sel.appendChild(o);
     try {
-      await fetch(deck.file).then(r => r.json());
+      await fetch(d.file).then(r=>r.json());
       loaded++;
-    } catch (e) {
-      console.error(`Failed to load deck: ${deck.file}`, e);
-    }
+    } catch(e) { console.error('Failed:', d.file); }
   }
+  document.getElementById('status').textContent = `Loaded ${loaded} of ${reg.decks.length} decks`;
 
-  status.textContent = `Loaded ${loaded} of ${registry.decks.length} decks`;
-
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
   }
 }
-
 window.onload = loadApp;
